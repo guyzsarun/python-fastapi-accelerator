@@ -1,0 +1,18 @@
+accelerator:
+  displayName: FastAPI Accelerator
+  description: Sample Python-FastAPI web application
+  iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
+  tags:
+    - python
+    - tanzu
+    - fastapi
+    - web
+
+  options:
+    - name: optionName
+      label: Nice Label
+      display: true
+      defaultValue: ""
+engine:
+  include:
+    - "**"

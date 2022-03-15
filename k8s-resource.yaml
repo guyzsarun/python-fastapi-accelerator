@@ -1,0 +1,9 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: python-fastapi-accelerator
+spec:
+  git:
+    url: https://github.com/guyzsarun/python-fastapi-accelerator
+    ref:
+      branch: master
