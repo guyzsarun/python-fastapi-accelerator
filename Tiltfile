@@ -21,9 +21,9 @@ k8s_custom_deploy(
     delete_cmd="tanzu apps workload delete -f config/workload.yaml --namespace "
     + NAMESPACE
     + " --yes",
-    deps=["requirements.txt", "main.py"],
+    deps=["requirements.txt", "app.py"],
     container_selector="workload",
-    # live_update=[sync(".", "/app")],
+    live_update=[sync(".", ".")],
 )
 
 k8s_resource(
