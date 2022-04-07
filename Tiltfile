@@ -1,6 +1,7 @@
 # -*- mode: Python -*
 SOURCE_IMAGE = os.getenv(
-    "SOURCE_IMAGE", default="index.docker.io/guyzsarun/python-fastapi-web-app-source"
+    "SOURCE_IMAGE",
+    default="index.docker.io/snuntaviriya982/python-fastapi-web-app-source",
 )
 LOCAL_PATH = os.getenv("LOCAL_PATH", default=".")
 NAMESPACE = os.getenv("NAMESPACE", default="dev-namespace")
@@ -21,9 +22,9 @@ k8s_custom_deploy(
     delete_cmd="tanzu apps workload delete -f config/workload.yaml --namespace "
     + NAMESPACE
     + " --yes",
-    deps=["requirements.txt", "app.py"],
+    deps=["requirements.txt", "app.py", "Procfile"],
     container_selector="workload",
-    live_update=[sync(".", ".")],
+    live_update=[sync(".", "/")],
 )
 
 k8s_resource(
