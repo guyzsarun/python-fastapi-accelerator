@@ -14,4 +14,4 @@ spec:
     git:
       url: https://github.com/guyzsarun/python-fastapi-accelerator
       ref:
-        branch: main
+        branch: feature/tilt
