@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-fastapi-web-app
+  description: python fastapi web app
+  tags:
+    - app-accelerator
+    - python
+    - fastapi
+    - cloud
+    - function
+    - tanzu
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=python-fastapi-web-app"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
